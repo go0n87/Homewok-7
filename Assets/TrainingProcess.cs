@@ -7,11 +7,14 @@ public class TrainingProcess : MonoBehaviour
 {
     public Button CurrentButton;
     public Image CurrentImage;
+    public GameObject GameManager;
 
-    public float MaxTime;
+    public string UnitType;
 
     private float currentTime;
-    private bool trainingIsActive;
+    private float MaxTime;
+
+    private bool trainingIsActive;    
 
     private void Start()
     {
@@ -20,19 +23,30 @@ public class TrainingProcess : MonoBehaviour
 
     void Update()
     {
+        currentTime -= Time.deltaTime;
+
         if (trainingIsActive)
-        {
-            currentTime -= Time.deltaTime;
+        {            
 
             if (currentTime <= 0)
             {
                 trainingIsActive = false;
                 CurrentButton.enabled = true;
                 CurrentImage.gameObject.SetActive(false);
+
+                if (UnitType == "Peasant")
+                {
+                    GameManager.GetComponent<GameMangerScript>().peasantQuantity++;                    
+                }
+                else
+                {
+                    GameManager.GetComponent<GameMangerScript>().warriorQuantity++;
+                }
             }
             else
             {
                 CurrentImage.fillAmount = currentTime / MaxTime;
+ 
             }            
         }
         
@@ -40,8 +54,25 @@ public class TrainingProcess : MonoBehaviour
 
     public void buttonTrainingClick()
     {
-        trainingIsActive    = true;
-        currentTime         = MaxTime;
-        
+
+        trainingIsActive = GameManager.GetComponent<GameMangerScript>().checkCoastUnit(UnitType);
+
+        if (trainingIsActive)
+        {            
+
+            if (UnitType == "Peasant")
+            {
+                MaxTime     = GameManager.GetComponent<GameMangerScript>().timeTrainingPeasant;
+                
+            }
+            else
+            {
+                MaxTime = GameManager.GetComponent<GameMangerScript>().timeTrainingWarrior;
+            }
+
+            CurrentButton.enabled = false;
+            CurrentImage.gameObject.SetActive(true);
+            currentTime = MaxTime;
+        }
     }
 }

@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\TrainingProcess.cs" />
+    <Compile Include="Assets\GameMangerScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
