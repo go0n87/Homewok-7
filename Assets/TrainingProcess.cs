@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,11 +9,14 @@ public class TrainingProcess : MonoBehaviour
     public Button CurrentButton;
     public Image CurrentImage;
     public GameObject GameManager;
+    public Text unitCountText;
 
     public string UnitType;
 
     private float currentTime;
     private float MaxTime;
+
+    private int unitCount;
 
     private bool trainingIsActive;    
 
@@ -36,11 +40,17 @@ public class TrainingProcess : MonoBehaviour
 
                 if (UnitType == "Peasant")
                 {
-                    GameManager.GetComponent<GameMangerScript>().peasantQuantity++;                    
+                    GameManager.GetComponent<GameMangerScript>().peasantQuantity++;
+                    unitCount           = Convert.ToInt32(unitCountText.text) + 1;
+                    unitCountText.text  = unitCount.ToString();
+
                 }
                 else
                 {
                     GameManager.GetComponent<GameMangerScript>().warriorQuantity++;
+                    unitCount           = Convert.ToInt32(unitCountText.text) + 1;
+                    unitCountText.text  = unitCount.ToString();
+
                 }
             }
             else

@@ -30,7 +30,7 @@ public class GameMangerScript : MonoBehaviour
     {
         if (UnitType == "Peasant")
         { 
-            if (wheatQuantity > coastPeasant) 
+            if (wheatQuantity >= coastPeasant) 
             {
                 wheatQuantity = wheatQuantity - coastPeasant;
                 return true;
@@ -42,7 +42,7 @@ public class GameMangerScript : MonoBehaviour
         }
         else 
         {
-            if (wheatQuantity > coastWarrior)
+            if (wheatQuantity >= coastWarrior)
             {
                 wheatQuantity = wheatQuantity - coastWarrior;
                 return true;
