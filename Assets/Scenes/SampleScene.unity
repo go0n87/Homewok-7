@@ -1268,9 +1268,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ImageSandClockDown: {fileID: 1726156236}
   ImageSandClockTop: {fileID: 67952911}
+  quantityWheatText: {fileID: 190099709}
   timeTrainingPeasant: 10
   timeTrainingWarrior: 5
-  timeBeforeAttack: 10
+  timeBeforeAttack: 30
   coastPeasant: 50
   coastWarrior: 100
   peasantQuantity: 0

@@ -8,6 +8,8 @@ public class GameMangerScript : MonoBehaviour
     public Image ImageSandClockDown;
     public Image ImageSandClockTop;
 
+    public Text quantityWheatText;
+
     public float timeTrainingPeasant;
     public float timeTrainingWarrior;
     public float timeBeforeAttack;
@@ -27,6 +29,8 @@ public class GameMangerScript : MonoBehaviour
         wheatQuantity   = 100;
         timeClockTop    = timeBeforeAttack;
         timeClockDown   = 0;
+
+        quantityWheatText.text = wheatQuantity.ToString();
     }
     
     void Update()
@@ -53,6 +57,7 @@ public class GameMangerScript : MonoBehaviour
             if (wheatQuantity >= coastPeasant) 
             {
                 wheatQuantity = wheatQuantity - coastPeasant;
+                quantityWheatText.text = wheatQuantity.ToString();
                 return true;
             }
             else 
@@ -65,6 +70,7 @@ public class GameMangerScript : MonoBehaviour
             if (wheatQuantity >= coastWarrior)
             {
                 wheatQuantity = wheatQuantity - coastWarrior;
+                quantityWheatText.text = wheatQuantity.ToString();
                 return true;
             }
             else
