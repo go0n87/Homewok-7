@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2021.3/staging' branch; Version is '2021.3.3f1 (af2e63e8f9bd) revision 11480675'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19043) 64bit Professional' Language: 'ru' Physical Memory: 16194 MB
+OS: 'Windows 10  (10.0.19041) 64bit Professional' Language: 'ru' Physical Memory: 16315 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
@@ -11,13 +11,13 @@ C:\Program Files\Unity\Hub\Editor\2021.3.3f1\Editor\Unity.exe
 -name
 AssetImportWorker2
 -projectPath
-C:/Users/Komp/Documents/GitHub/Homewok-7
+C:/Users/go0n/Documents/GitHub/Homewok-7
 -logFile
 Logs/AssetImportWorker2.log
 -srvPort
-53276
-Successfully changed project path to: C:/Users/Komp/Documents/GitHub/Homewok-7
-C:/Users/Komp/Documents/GitHub/Homewok-7
+1143
+Successfully changed project path to: C:/Users/go0n/Documents/GitHub/Homewok-7
+C:/Users/go0n/Documents/GitHub/Homewok-7
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,108 +47,105 @@ C:/Users/Komp/Documents/GitHub/Homewok-7
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 168.86 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 90.86 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.3f1 (af2e63e8f9bd)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.3f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/Komp/Documents/GitHub/Homewok-7/Assets
+[Subsystems] Discovering subsystems at path C:/Users/go0n/Documents/GitHub/Homewok-7/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1660 SUPER (ID=0x21c4)
-    Vendor:   NVIDIA
-    VRAM:     5992 MB
-    Driver:   31.0.15.2225
+    Renderer: Radeon RX 570 Series (ID=0x67df)
+    Vendor:   ATI
+    VRAM:     4074 MB
+    Driver:   31.0.12019.11001
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.3f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.3f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56828
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56116
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.3f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004983 seconds.
+Registered in 0.003001 seconds.
 Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 174.73 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 85.36 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.555 seconds
+- Completed reload, in  0.527 seconds
 Domain Reload Profiling:
-	ReloadAssembly (555ms)
-		BeginReloadAssembly (43ms)
+	ReloadAssembly (528ms)
+		BeginReloadAssembly (54ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (0ms)
-		EndReloadAssembly (438ms)
-			LoadAssemblies (42ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (385ms)
+			LoadAssemblies (53ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (68ms)
+			SetupTypeCache (88ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (22ms)
-			SetupLoadedEditorAssemblies (314ms)
+			RebuildScriptCaches (23ms)
+			SetupLoadedEditorAssemblies (235ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (175ms)
+				RefreshPlugins (85ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (96ms)
-				ProcessInitializeOnLoadMethodAttributes (36ms)
+				ProcessInitializeOnLoadAttributes (103ms)
+				ProcessInitializeOnLoadMethodAttributes (39ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002622 seconds.
+Registered in 0.002600 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Komp\Documents\GitHub\Homewok-7\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Komp\Documents\GitHub\Homewok-7\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\go0n\Documents\GitHub\Homewok-7\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\go0n\Documents\GitHub\Homewok-7\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.31 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.58 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.734 seconds
+- Completed reload, in  0.836 seconds
 Domain Reload Profiling:
-	ReloadAssembly (735ms)
-		BeginReloadAssembly (74ms)
+	ReloadAssembly (836ms)
+		BeginReloadAssembly (88ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
+			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (11ms)
-		EndReloadAssembly (585ms)
-			LoadAssemblies (45ms)
+			CreateAndSetChildDomain (17ms)
+		EndReloadAssembly (654ms)
+			LoadAssemblies (55ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (152ms)
-			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (30ms)
-			SetupLoadedEditorAssemblies (329ms)
+			SetupTypeCache (184ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (44ms)
+			SetupLoadedEditorAssemblies (333ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (157ms)
-				ProcessInitializeOnLoadAttributes (146ms)
-				ProcessInitializeOnLoadMethodAttributes (18ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (80ms)
+				ProcessInitializeOnLoadAttributes (216ms)
+				ProcessInitializeOnLoadMethodAttributes (28ms)
 				AfterProcessingInitializeOnLoad (3ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (4ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
-Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.65 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3242 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 23 unused Assets / (55.6 KB). Loaded Objects now: 3701.
 Memory consumption went from 111.3 MB to 111.2 MB.
-Total: 2.307300 ms (FindLiveObjects: 0.194200 ms CreateObjectMapping: 0.081300 ms MarkObjects: 1.950200 ms  DeleteObjects: 0.080500 ms)
+Total: 3.056800 ms (FindLiveObjects: 0.300700 ms CreateObjectMapping: 0.078600 ms MarkObjects: 2.592300 ms  DeleteObjects: 0.084000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -162,43 +159,37 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 868.287865 seconds.
+  Time since last request: 4209.583861 seconds.
   path: Assets/SandClock.png
   artifactKey: Guid(7a98ef90972839e4cbdfdd4b17647499) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SandClock.png using Guid(7a98ef90972839e4cbdfdd4b17647499) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ae54dc3ae9728e15cf7f63d6b399213') in 0.104287 seconds 
+Start importing Assets/SandClock.png using Guid(7a98ef90972839e4cbdfdd4b17647499) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7289745247de01f48e94a063c1f239d9') in 0.147456 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Peasant_Button.png
-  artifactKey: Guid(1d16d724524cc1f41af5b824e1f29a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Peasant_Button.png using Guid(1d16d724524cc1f41af5b824e1f29a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e03a684560a22c2f5b0f29c228eeed1') in 0.145334 seconds 
+  Time since last request: 0.000022 seconds.
+  path: Assets/TimerBackground.png
+  artifactKey: Guid(05c66f8f995510242a9bc25dd0062ad1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TimerBackground.png using Guid(05c66f8f995510242a9bc25dd0062ad1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c87f88b127200cbe68085e4939308316') in 0.179367 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Augusta One.ttf
-  artifactKey: Guid(59f91b926f6d34f4c9a2a28417eaf157) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Augusta One.ttf using Guid(59f91b926f6d34f4c9a2a28417eaf157) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28a9f7cae4a936c04a9a0dc1f40de0d6') in 0.029942 seconds 
+  Time since last request: 0.000022 seconds.
+  path: Assets/Peasant_Button_Light.png
+  artifactKey: Guid(0388ca4f8cea9ed45b0b0a8adec9ebbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Peasant_Button_Light.png using Guid(0388ca4f8cea9ed45b0b0a8adec9ebbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '084a0a96af61f8b71981807e975ee84d') in 0.171928 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000020 seconds.
+  Time since last request: 0.000016 seconds.
   path: Assets/SandClockDown.png
   artifactKey: Guid(5bf126acf45a545468248fa049d7706e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SandClockDown.png using Guid(5bf126acf45a545468248fa049d7706e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '339ecfb947a22e48c5119ad7c622220f') in 0.014367 seconds 
+Start importing Assets/SandClockDown.png using Guid(5bf126acf45a545468248fa049d7706e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4eca064e286daf1465a6d67dc7c7eb7') in 0.018437 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Augusta Two.ttf
-  artifactKey: Guid(706dcc256c1ceb443be5df8a30ef185c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Augusta Two.ttf using Guid(706dcc256c1ceb443be5df8a30ef185c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c568fc12b52aa2eac1910c39bccace13') in 0.007253 seconds 
+  Time since last request: 0.000017 seconds.
+  path: Assets/Warriot_Button.png
+  artifactKey: Guid(e619bfcb9596d33418d17b1ba8215898) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Warriot_Button.png using Guid(e619bfcb9596d33418d17b1ba8215898) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c32e9c9e3614e0746d682bbbb4e34438') in 0.180763 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Background.jpg
-  artifactKey: Guid(57065e0c6cffff948932f38b2e24dd68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Background.jpg using Guid(57065e0c6cffff948932f38b2e24dd68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88b40373ee4c8ab6f8f7e97c045c5bed') in 0.128418 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
+  Time since last request: 0.000030 seconds.
   path: Assets/Warriot_Button_Light.png
   artifactKey: Guid(6e224397e9043964eaffb6f74067afab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Warriot_Button_Light.png using Guid(6e224397e9043964eaffb6f74067afab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fb63e782a2ee643435aa09d2710717b') in 0.130119 seconds 
+Start importing Assets/Warriot_Button_Light.png using Guid(6e224397e9043964eaffb6f74067afab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2eee9cfba3e8ea63c1fb34c0681c3e59') in 0.166414 seconds 
