@@ -1601,14 +1601,17 @@ MonoBehaviour:
   ImageSandClockDown: {fileID: 1726156236}
   ImageSandClockTop: {fileID: 67952911}
   quantityWheatText: {fileID: 190099709}
+  quantityPeasantText: {fileID: 2082666264}
   timeTrainingPeasant: 10
   timeTrainingWarrior: 5
-  timeBeforeAttack: 30
-  coastPeasant: 50
-  coastWarrior: 100
-  peasantQuantity: 0
+  timeBeforeAttack: 20
+  coastPeasant: 4
+  coastWarrior: 8
+  peasantQuantity: 3
   warriorQuantity: 0
-  wheatQuantity: 0
+  wheatPerPeasant: 2
+  wheatToWarrior: 5
+  wheatQuantity: 10
 --- !u!4 &1653979571
 Transform:
   m_ObjectHideFlags: 0
@@ -2063,7 +2066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.6862745}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5176471}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2205,8 +2208,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -94.48999, y: 126.82}
-  m_SizeDelta: {x: 342.0699, y: 231.3588}
+  m_AnchoredPosition: {x: -90, y: 124.19}
+  m_SizeDelta: {x: 342.0699, y: 290.62}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2081723658
 MonoBehaviour:
@@ -2228,7 +2231,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 18e0b3294bfacfb44a34a7d979be58d4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 05c66f8f995510242a9bc25dd0062ad1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

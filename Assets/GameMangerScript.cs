@@ -9,6 +9,7 @@ public class GameMangerScript : MonoBehaviour
     public Image ImageSandClockTop;
 
     public Text quantityWheatText;
+    public Text quantityPeasantText;
 
     public float timeTrainingPeasant;
     public float timeTrainingWarrior;
@@ -18,6 +19,8 @@ public class GameMangerScript : MonoBehaviour
     public int coastWarrior;
     public int peasantQuantity;
     public int warriorQuantity;
+    public int wheatPerPeasant;
+    public int wheatToWarrior;
 
     [SerializeField] int wheatQuantity;
 
@@ -26,11 +29,14 @@ public class GameMangerScript : MonoBehaviour
 
     void Start()
     {
-        wheatQuantity   = 100;
+        
         timeClockTop    = timeBeforeAttack;
         timeClockDown   = 0;
 
-        quantityWheatText.text = wheatQuantity.ToString();
+        quantityWheatText.text      = wheatQuantity.ToString();
+        quantityPeasantText.text    = peasantQuantity.ToString();    
+
+
     }
     
     void Update()
