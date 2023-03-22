@@ -43,8 +43,15 @@ public class GameMangerScript : MonoBehaviour
     private float harvestTimerTop;
     private float harvestTimerDown;
 
+    private bool tickBeforeAttack;
+    private bool tickEatCycle;
+    private bool tickHarvestCycle;
+
     void Start()
     {
+        tickBeforeAttack = false;
+        tickEatCycle     = false;
+        tickHarvestCycle = false;
 
         timeRaidTop = timeBeforeAttack;
         timeRaidDown = 0;
@@ -56,16 +63,31 @@ public class GameMangerScript : MonoBehaviour
         harvestTimerDown = 0;
 
         quantityWheatText.text      = wheatQuantity.ToString();
-        quantityPeasantText.text    = peasantQuantity.ToString();    
+        quantityPeasantText.text    = peasantQuantity.ToString();          
 
 
     }
     
     void Update()
     {
-        checkTimerAnimation(ref timeRaidTop    , ref timeRaidDown    , ref timeBeforeAttack, ImageRaidClockTop   , ImageRaidClockDown);
-        checkTimerAnimation(ref eatTimerkTop   , ref eatTimerkDown   , ref timeEatCycle    , ImageEatClockTop    , ImageEatClockDown);
-        checkTimerAnimation(ref harvestTimerTop, ref harvestTimerDown, ref timeHarvestCycle, ImageHarvestClockTop, ImageHarvestClockDown);
+        checkTimerAnimation(ref timeRaidTop    , ref timeRaidDown    , ref timeBeforeAttack, ImageRaidClockTop   , ImageRaidClockDown   , ref tickBeforeAttack);
+        checkTimerAnimation(ref eatTimerkTop   , ref eatTimerkDown   , ref timeEatCycle    , ImageEatClockTop    , ImageEatClockDown    , ref tickEatCycle);
+        checkTimerAnimation(ref harvestTimerTop, ref harvestTimerDown, ref timeHarvestCycle, ImageHarvestClockTop, ImageHarvestClockDown, ref tickHarvestCycle);
+
+        if(tickBeforeAttack) 
+        {
+            eventAttack();
+        }
+        
+        if(tickEatCycle)     
+        {
+            eventEatCycle();
+        }
+        
+        if(tickHarvestCycle) 
+        {
+            eventHarvestCycle();
+        }
 
     }
 
@@ -99,14 +121,14 @@ public class GameMangerScript : MonoBehaviour
         }      
     }
 
-    private void checkTimerAnimation(ref float timeClockTop, ref float timeClockDown, ref float totalTime,Image ImageSandClockTop, Image ImageSandClockDown) 
+    private void checkTimerAnimation(ref float timeClockTop, ref float timeClockDown, ref float totalTime,Image ImageSandClockTop, Image ImageSandClockDown, ref bool tickValue) 
     {
         timeClockTop  -= Time.deltaTime;
         timeClockDown += Time.deltaTime;
 
         if (timeClockTop <= 0)
         {
-
+            tickValue = true;
         }
         else
         {
@@ -115,4 +137,32 @@ public class GameMangerScript : MonoBehaviour
 
         }
     }
+
+    private void eventAttack()
+    {
+        timeRaidTop = timeBeforeAttack;
+        timeRaidDown = 0;
+
+        tickBeforeAttack = false;
+    }
+
+    private void eventEatCycle()
+    {
+        eatTimerkTop = timeEatCycle;
+        eatTimerkDown = 0;
+
+        tickEatCycle = false;
+    }
+
+    private void eventHarvestCycle()
+    {
+        wheatQuantity = wheatQuantity + peasantQuantity * 2;
+        quantityWheatText.text = wheatQuantity.ToString();
+
+        harvestTimerTop = timeHarvestCycle;
+        harvestTimerDown = 0;
+
+        tickHarvestCycle = false;
+    }
+
 }
