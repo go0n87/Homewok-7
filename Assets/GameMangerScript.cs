@@ -16,6 +16,10 @@ public class GameMangerScript : MonoBehaviour
 
     public Text quantityWheatText;
     public Text quantityPeasantText;
+    public Text CountWarriorText;
+
+    public GameObject GameVictoryPanel;
+    public GameObject GameOverPanel;    
 
     public float timeTrainingPeasant;
     public float timeTrainingWarrior;
@@ -27,12 +31,15 @@ public class GameMangerScript : MonoBehaviour
     public int coastWarrior;
     public int peasantQuantity;
     public int warriorQuantity;
+    public int raidQuantity;
     public int wheatPerPeasant;
     public int wheatToWarrior;
-
     public int enemyGain;
 
     [SerializeField] int wheatQuantity;
+
+    private int raidRange;
+    private int numberOfRaid;
 
     private float timeRaidTop;
     private float timeRaidDown;
@@ -45,13 +52,16 @@ public class GameMangerScript : MonoBehaviour
 
     private bool tickBeforeAttack;
     private bool tickEatCycle;
-    private bool tickHarvestCycle;
+    private bool tickHarvestCycle;    
 
     void Start()
     {
         tickBeforeAttack = false;
         tickEatCycle     = false;
         tickHarvestCycle = false;
+
+        raidRange    = 1;
+        numberOfRaid = 1;
 
         timeRaidTop = timeBeforeAttack;
         timeRaidDown = 0;
@@ -89,6 +99,8 @@ public class GameMangerScript : MonoBehaviour
             eventHarvestCycle();
         }
 
+        checkVictoryConditions();
+        checkDefeatConditions();
     }
 
     public bool checkCoastUnit(string UnitType)
@@ -121,7 +133,7 @@ public class GameMangerScript : MonoBehaviour
         }      
     }
 
-    private void checkTimerAnimation(ref float timeClockTop, ref float timeClockDown, ref float totalTime,Image ImageSandClockTop, Image ImageSandClockDown, ref bool tickValue) 
+    private void checkTimerAnimation(ref float timeClockTop, ref float timeClockDown, ref float totalTime, Image ImageSandClockTop, Image ImageSandClockDown, ref bool tickValue) 
     {
         timeClockTop  -= Time.deltaTime;
         timeClockDown += Time.deltaTime;
@@ -143,6 +155,28 @@ public class GameMangerScript : MonoBehaviour
         timeRaidTop = timeBeforeAttack;
         timeRaidDown = 0;
 
+
+        warriorQuantity       -= Random.Range(raidRange, numberOfRaid);
+        CountWarriorText.text = warriorQuantity.ToString();
+
+        if (raidRange == 3)
+        {
+            raidRange = 1;
+        }
+        else
+        {
+            ++raidRange;
+        }
+
+        if (numberOfRaid == 3)
+        {
+            numberOfRaid = 1;
+        }
+        else
+        {
+            ++numberOfRaid;
+        }
+        
         tickBeforeAttack = false;
     }
 
@@ -156,13 +190,31 @@ public class GameMangerScript : MonoBehaviour
 
     private void eventHarvestCycle()
     {
-        wheatQuantity = wheatQuantity + peasantQuantity * 2;
+        wheatQuantity += peasantQuantity * 2;
         quantityWheatText.text = wheatQuantity.ToString();
 
         harvestTimerTop = timeHarvestCycle;
         harvestTimerDown = 0;
 
         tickHarvestCycle = false;
+    }
+
+    private void checkDefeatConditions()
+    {
+        if (warriorQuantity < 0)
+        {
+            GameOverPanel.SetActive(true);
+            Time.timeScale = 0;
+        }
+        
+    }
+    private void checkVictoryConditions()
+    {
+        if (warriorQuantity == 30 || wheatQuantity == 2000)
+        {
+            GameVictoryPanel.SetActive(true);
+            Time.timeScale = 0;
+        }        
     }
 
 }
