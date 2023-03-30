@@ -19,7 +19,11 @@ public class GameMangerScript : MonoBehaviour
     public Text CountWarriorText;
 
     public GameObject GameVictoryPanel;
-    public GameObject GameOverPanel;    
+    public GameObject GameOverPanel;
+
+    public AudioSource track1;
+    public AudioSource track2;
+    public AudioSource track3;
 
     public float timeTrainingPeasant;
     public float timeTrainingWarrior;
@@ -37,6 +41,8 @@ public class GameMangerScript : MonoBehaviour
     public int enemyGain;
 
     [SerializeField] int wheatQuantity;
+
+    private AudioSource[] playList;
 
     private int raidRange;
     private int numberOfRaid;
@@ -56,6 +62,8 @@ public class GameMangerScript : MonoBehaviour
 
     void Start()
     {
+
+
         tickBeforeAttack = false;
         tickEatCycle     = false;
         tickHarvestCycle = false;
@@ -203,8 +211,11 @@ public class GameMangerScript : MonoBehaviour
     {
         if (warriorQuantity < 0)
         {
-            GameOverPanel.SetActive(true);
-            Time.timeScale = 0;
+
+             GameOverPanel.SetActive(true);
+             Time.timeScale  = 0;
+             warriorQuantity = 0;
+            
         }
         
     }
@@ -213,7 +224,9 @@ public class GameMangerScript : MonoBehaviour
         if (warriorQuantity == 30 || wheatQuantity == 2000)
         {
             GameVictoryPanel.SetActive(true);
-            Time.timeScale = 0;
+            Time.timeScale  = 0;
+            warriorQuantity = 0;
+            wheatQuantity   = 0;
         }        
     }
 
