@@ -346,6 +346,7 @@
 "Assets/Script/AudioEffects.cs"
 "Assets/Script/GameMangerScript.cs"
 "Assets/Script/GameMenuScript.cs"
+"Assets/Script/MusicPlayer.cs"
 "Assets/Script/TrainingProcess.cs"
 -langversion:9.0
 

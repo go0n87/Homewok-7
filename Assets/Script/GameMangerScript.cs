@@ -42,8 +42,6 @@ public class GameMangerScript : MonoBehaviour
 
     [SerializeField] int wheatQuantity;
 
-    private AudioSource[] playList;
-
     private int raidRange;
     private int numberOfRaid;
 

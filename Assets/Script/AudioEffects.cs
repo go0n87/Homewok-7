@@ -5,10 +5,12 @@ using UnityEngine;
 public class AudioEffects : MonoBehaviour
 {
     public AudioClip audioClip;
-    public GameObject CurrentPanel;
-    public AudioSource CurrentAudio;
+    
+    public GameObject  CurrentPanel;
+    
+    public AudioSource CurrentAudio;    
 
-    private bool clickEvent   = false;
+    private bool clickEvent   = false;    
 
     void Update()
     {
@@ -17,6 +19,7 @@ public class AudioEffects : MonoBehaviour
             CurrentPanel.SetActive(false);
             clickEvent = false;
         }
+
     }
 
     public void PlaySoundClick()
