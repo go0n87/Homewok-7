@@ -78,8 +78,10 @@ public class GameMangerScript : MonoBehaviour
         harvestTimerTop = timeHarvestCycle;
         harvestTimerDown = 0;
 
+        resetToDefaultResourceValues();
+
         quantityWheatText.text      = wheatQuantity.ToString();
-        quantityPeasantText.text    = peasantQuantity.ToString();          
+        quantityPeasantText.text    = peasantQuantity.ToString();        
 
 
     }
@@ -161,7 +163,6 @@ public class GameMangerScript : MonoBehaviour
         timeRaidTop = timeBeforeAttack;
         timeRaidDown = 0;
 
-
         warriorQuantity       -= Random.Range(raidRange, numberOfRaid);
         CountWarriorText.text = warriorQuantity.ToString();
 
@@ -188,6 +189,9 @@ public class GameMangerScript : MonoBehaviour
 
     private void eventEatCycle()
     {
+        wheatQuantity -= warriorQuantity;
+        quantityWheatText.text = wheatQuantity.ToString();
+
         eatTimerkTop = timeEatCycle;
         eatTimerkDown = 0;
 
@@ -219,7 +223,7 @@ public class GameMangerScript : MonoBehaviour
     }
     private void checkVictoryConditions()
     {
-        if (warriorQuantity == 30 || wheatQuantity == 2000)
+        if (warriorQuantity >= 30 || wheatQuantity > 300)
         {
             GameVictoryPanel.SetActive(true);
             Time.timeScale  = 0;
@@ -227,5 +231,16 @@ public class GameMangerScript : MonoBehaviour
             wheatQuantity   = 0;
         }        
     }
+    public void resetToDefaultResourceValues()
+    {
+        peasantQuantity = 3;
+        warriorQuantity = 0;
+        wheatQuantity   = 10;
+        raidRange       = 1;
+        numberOfRaid    = 1;
 
+        quantityPeasantText.text = peasantQuantity.ToString();
+        CountWarriorText.text    = warriorQuantity.ToString();
+        quantityWheatText.text   = wheatQuantity.ToString();
+    }
 }
